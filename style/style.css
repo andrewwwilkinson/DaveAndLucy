@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box; }
+
+body {
+  background: url(/img/white.png);
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Great Vibes", cursive; }
+
+h2 {
+  font-size: 5.5em;
+  text-align: center; }
+
+.section {
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  .section .back-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: .75;
+    z-index: 1; }
+  .section-content {
+    padding: 100px; }
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  opacity: .6; }
+  .side-nav ul {
+    margin-bottom: 0; }
+    .side-nav ul li {
+      width: 12px;
+      height: 12px;
+      display: block;
+      border-radius: 50%;
+      background: #fff;
+      margin: 25px auto 0;
+      transition: all .3s ease-in-out; }
+      .side-nav ul li:first-child {
+        margin-top: 0; }
+      .side-nav ul li.active {
+        width: 15px;
+        height: 15px; }
+  .side-nav:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    background: #fff;
+    pointer-events: none; }
+
+header {
+  text-align: center; }
+  header .section-content {
+    font-size: 4.5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -25%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; }
+    header .section-content h1 {
+      font-size: 3rem;
+      font-family: "Frank Ruhl Libre", serif; }
+      header .section-content h1 .big {
+        font-size: 2.2em;
+        font-family: "Great Vibes", cursive;
+        margin: 30px 0;
+        display: block; }
+    header .section-content:before, header .section-content:after {
+      content: '- \2661  -';
+      display: block; }
+  header.animate .section-content {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+
+.balmer {
+  background: url(/img/balmer-lawn.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -10px 50%; }
+  .balmer .section-content {
+    position: relative;
+    z-index: 2;
+    color: #fff; }
+
+.rsvp {
+  position: relative;
+  background: url(/img/wood.png); }
+  .rsvp small {
+    font-size: .4em;
+    font-family: "Frank Ruhl Libre", serif;
+    display: block; }
+  .rsvp .rsvp-form {
+    max-width: 400px;
+    margin-top: 80px; }
+    .rsvp .rsvp-form label {
+      font-size: 3em;
+      font-family: "Great Vibes", cursive; }
+    .rsvp .rsvp-form .textbox {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #666;
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 2em;
+      line-height: 1em;
+      margin-top: 3px;
+      font-family: "Frank Ruhl Libre", serif; }
+      .rsvp .rsvp-form .textbox ~ .textbox-line {
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        top: 12px;
+        bottom: 12px;
+        pointer-events: none; }
+        .rsvp .rsvp-form .textbox ~ .textbox-line:after {
+          content: '';
+          height: 1px;
+          position: absolute;
+          left: 50%;
+          right: 50%;
+          bottom: 0;
+          background: #000;
+          transition: left .4s ease-in-out, right .4s ease-in-out; }
+      .rsvp .rsvp-form .textbox:focus ~ .textbox-line:after {
+        left: 0;
+        right: 0; }
+    .rsvp .rsvp-form .radio input[type=radio] {
+      display: none; }
+      .rsvp .rsvp-form .radio input[type=radio] ~ label {
+        font-family: "Frank Ruhl Libre", serif;
+        font-size: 2.5em;
+        position: relative;
+        padding-left: 40px; }
+        .rsvp .rsvp-form .radio input[type=radio] ~ label:before {
+          content: '';
+          width: 30px;
+          height: 30px;
+          border: 1px solid #666;
+          position: absolute;
+          left: 0; }
+      .rsvp .rsvp-form .radio input[type=radio]:checked ~ label:before {
+        border-color: #000; }
+      .rsvp .rsvp-form .radio input[type=radio]:checked ~ label:after {
+        content: '';
+        width: 20px;
+        height: 8px;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #000;
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        transform: rotate(-45deg); }
+    .rsvp .rsvp-form .btn-rsvp {
+      font-size: 2em;
+      display: block;
+      margin: 0 auto;
+      padding: 5px 20px;
+      background: url(/img/white.png);
+      font-family: "Frank Ruhl Libre", serif;
+      border-radius: 10%; }
+      .rsvp .rsvp-form .btn-rsvp:active {
+        background: url(/img/white.png); }
+  .rsvp:after {
+    content: url(/img/rsvp.png);
+    transform: rotate(20deg);
+    position: absolute;
+    bottom: -110px;
+    right: -130px; }
+
+.meal {
+  color: #fff;
+  background: url(/img/reception.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: -10px 50%; }
+  .meal .section-content {
+    position: relative;
+    z-index: 2; }
+
+/*# sourceMappingURL=style.css.map */
